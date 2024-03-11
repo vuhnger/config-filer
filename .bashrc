@@ -173,3 +173,17 @@ fi
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
+
+echo "Loading terminal and hacking scripts..."
+time=0.8
+
+for i in {1..20}; do
+	echo -n "."
+	sleep $time
+	# Update time for next iteration with 10% decrease
+	time=$(echo "$time * 0.9" | bc)
+done
+echo -e "\n"
+echo "Successfully loaded terminal."
+sleep 0.2
+echo "Welcome to WSL, Victor."
